@@ -18,21 +18,31 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Format
+        run: npm run format:check
+
       - name: Build
         run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
       - name: Upload artifact
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
@@ -43,9 +53,11 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4

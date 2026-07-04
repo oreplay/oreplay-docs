@@ -1,0 +1,5 @@
+# Ignore artifacts
+build
+
+# Ignore mdx as only legacy mdx is supported by prettier
+*.mdx

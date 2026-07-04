@@ -12,7 +12,9 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "format": "npx prettier . --write",
+    "format:check": "npx prettier . --check"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
@@ -29,6 +31,7 @@
     "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.10.1",
     "@types/react": "^19.0.0",
+    "prettier": "^3.9.4",
     "typescript": "~6.0.2"
   },
   "browserslist": {
