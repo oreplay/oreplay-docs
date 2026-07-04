@@ -1,28 +1,28 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import type { ReactNode } from "react"
+import clsx from "clsx"
+import Heading from "@theme/Heading"
+import styles from "./styles.module.css"
 
 type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: ReactNode;
-};
+  title: string
+  Svg: React.ComponentType<React.ComponentProps<"svg">>
+  description: ReactNode
+}
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Easy to Use",
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        O-Replay was designed from the ground up to display orienteering live results
-        and be easily used by competitors, organizers and spectators.
+        O-Replay was designed from the ground up to display orienteering live
+        results and be easily used by competitors, organizers and spectators.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Focus on What Matters",
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
         O-Replay lets you focus on the competition, while we do the chores. Go
@@ -31,20 +31,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by orienteers',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Powered by orienteers",
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        As orienteers ourselves, we understand your needs. Help us create
-        the results' website of the future for all orienteering disciplines.
+        As orienteers ourselves, we understand your needs. Help us create the
+        results' website of the future for all orienteering disciplines.
       </>
     ),
   },
-];
+]
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -53,7 +53,7 @@ function Feature({title, Svg, description}: FeatureItem) {
         <p>{description}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures(): ReactNode {
@@ -67,5 +67,5 @@ export default function HomepageFeatures(): ReactNode {
         </div>
       </div>
     </section>
-  );
+  )
 }
