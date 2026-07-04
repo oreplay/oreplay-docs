@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "O-Replay",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "O-Replay Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Organizer's info": {
+    "message": "Info para Organizadores",
+    "description": "Navbar item with label Organizer's info"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Features": {
+    "message": "Features",
+    "description": "Navbar item with label Features"
+  }
+}

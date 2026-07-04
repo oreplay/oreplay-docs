@@ -1,0 +1,43 @@
+---
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Relay Stages
+
+:::danger[Not supported yet]
+This page is still being written, as this feature is still under development.
+:::
+
+:::info
+Here is a short explanation on what files shall be exported from OS12,
+given by a comment by pimatherror on Apr 6 in the GitHub Issue:
+[Relays support #58](https://github.com/oreplay/oreplay-backend/issues/58#issuecomment-4193435930).
+:::
+
+## Test results with OS12
+Tested uploading 2 xml file types and getting full data for relay competitions (splits included, but not online/radio controls).
+### Official Results (by class):
+Final results for teams with final result: either complete team has finished or a member is not qualified (MP/DISQ/DNF/DNS...).
+
+This file can include splits with the "extended format" configuration:
+<img width="388" height="217" alt="Image" src="https://github.com/user-attachments/assets/9e6a3657-d936-4380-8f0c-97a9c09841d6" />
+
+<img width="279" height="442" alt="Image" src="https://github.com/user-attachments/assets/f4e0769e-f6ed-4689-80ff-8126f8ce85ae" />
+
+**Note:** "Formato extendido" makes the XML generated file (by Export -> XML IOF 3.0) to include split times. Without this checkbox the splits are not included in the XML.
+
+O-Replay Desktop and Backend already processes the split times and final positions (from this XML file) correctly.
+
+### Provisional Results (by class):
+For live coverage of the event, we want info about results of current legs.
+This XML file does NOT include split times, so Official Results are still necessary.
+**Note that** there is no need to upload split times from the "Results -> Splits -> by class" window/report (which only allows a CSV export, no XML). Hence, there is is no need to have 2 client instances reading CSV and XML respectively
+
+<img width="214" height="158" alt="Image" src="https://github.com/user-attachments/assets/c6b239b6-e4b3-4eee-ad64-3a7355b57e38" />
+
+<img width="295" height="579" alt="Image" src="https://github.com/user-attachments/assets/05d509dc-3e8b-4947-b551-d30ee4964337" />
+
+**Note:** "Resultado total" with "Formato extendido" makes the XML generated file to include ALL current legs. Without this checkbox the XML only includes same teams as in Official Results.

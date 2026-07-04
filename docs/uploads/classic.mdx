@@ -1,0 +1,247 @@
+---
+sidebar_position: 1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Classic Stages
+
+## Before the Race
+
+### Uploading Start Times
+
+Start times are uploaded for two purposes:
+1. To display them for runners' information.
+2. To show in-race times.
+
+We only support IOF XML v3 files.
+Get O-Replay Desktop Client ready for files and export the start times from your timekeeping software:
+
+<Tabs groupId="timekeeping-software" queryString>
+    <TabItem value="SportSoftware-2010" label="OE2010">
+        You need to export the start times XML file.
+        Go to **"Start list" → "Reports" → "Classes":**
+
+        ![Menu that has to be chosen](./img/OE2010/ExportStartTimes_ChooseMenu.png)
+
+        From the top menu, choose **"Export":**
+
+        ![Export button](./img/OE2010/ExportStartTimes_Export.png)
+
+        Save using IOF XML v3 in the folder O-Replay Client is listening.
+
+        ![Choose format dialog](./img/OE2010/ExportStartTimes_ChooseIOFXMLv3.png)
+    </TabItem>
+    <TabItem value="SportSoftware-12" label="OE12">
+        You need to export the start times XML file.
+        Go to **Start list → start list reports → by classes:**
+
+        ![Menu that has to be chosen](./img/OE12/ExportStartTimesChoseMenu.png)
+
+        From the top menu, choose **"Export"**
+
+        ![Export button](./img/OE12/ExportStartTimesChooseExport.png)
+
+        Save using IOF XML in the folder O-Replay Client is listening.
+
+        ![Save using IOF XML format](./img/OE12/ExportStartTimesSetIOFXML.png)
+    </TabItem>
+    <TabItem value="MeOS" label="MeOS">
+        You need to export the start times XML file. Go to **Competition → Export data → Start List**
+
+        ![Menu to export start list in MeOS](./img/MeOS/UploadStartTimes_Menu.png)
+
+        Select all the classes, choose **"IOF Start List"**
+        and export the file to the folder the client is listening to.
+
+        ![Menu to choose classes to export and set IOF XML format](./img/MeOS/UploadStartTimes_SetIOFXML.png)
+    </TabItem>
+</Tabs>
+
+:::tip[Multievent]
+
+If your event has multiple stages, you will have to upload start times for each of the stages.
+
+:::
+
+:::info[Races without start times]
+If you are using a start control and runners don’t have preassigned start times,
+it is recommended to upload entries in IOF XML format.
+This allows to display all the entries, and competitors can see how many runners are yet to finish.
+:::
+
+:::warning[Uploading start times after results]
+No start times can be uploaded after uploading results.
+If you want to upload start times after uploading results you need to Reset the stage first.
+:::
+
+
+## During the Race
+
+### Uploading Results
+
+We support IOF XML v3 splits files for uploading results.
+Use an empty folder to save these files (you can reuse the folder created for start times).
+
+:::tip
+Check out the [Overall Results](./overall.mdx) page for multi-stage competitions.
+:::
+
+Get the client ready and listening for new files, then export result from your timekeeping software:
+
+<Tabs groupId="timekeeping-software" queryString>
+    <TabItem value="SportSoftware-2010" label="OE2010">
+        You need to export the splits XML file. Go to **"Results" → "Splits times" → "Classes":**
+
+        ![Menu that has to be chosen](./img/OE2010/ExportSplitTimes_ChooseMenu.png)
+
+        Due to a bug in OE2010, you must export results without decimal places.
+        In the settings menu at the left side, go to **"Report Formats"**
+        and choose **"HH:MM:SS"** as the time format.
+
+        ![Report formats settings menu](./img/OE2010/ExportSplitTimes_ChooseReportFormat.png)
+
+        You need to export all runners, including DNS.
+        In the settings menu at the left side, go to **"More options" → "How many competitors?"**
+        and choose **"All"**. Uncheck **"ExcLude dns"**.
+
+        ![More options settings menu](./img/OE2010/ExportSplitTimes_ChooseAllRunners.png)
+
+        Export regularly the splits using Automatic report.
+        In the left side settings menu, go to **"Automatic report"**.
+        Then, set the automatic actions only to **"export"** and your desired refresh interval.
+        Finally, hit start.
+
+        ![Automatic report settings menu](./img/OE2010/ExportSplitTimes_AutomaticReport.png)
+
+        Save using IOF XML v3 in the folder O-Replay Client is listening.
+
+        ![Save dialog](./img/OE2010/ExportSplitTimes_Save.png)
+    </TabItem>
+    <TabItem value="SportSoftware-12" label="OE12">
+        You need to export the splits XML file. Go to **Results → Splits times → by classes:**
+
+        ![Menu that has to be chosen](./img/OE12/ExportSplitsChoseMenu.png)
+
+        You need to export all the runners. Uncheck the option **"Exclude dns"**.
+
+        ![Automatic report menu in OE12](./img/OE12/ExportSplits_IncludeAllRunners.png)
+
+        Set the automatic report at your desired refresh interval.
+
+        ![Automatic report menu in OE12](./img/OE12/ExportSplitsSetAutomaticExport.png)
+
+        Save using IOF XML in the folder O-Replay Client is listening.
+
+        ![Save using IOF XML format](./img/OE12/ExportSplitsSetIOFXML.png)
+    </TabItem>
+    <TabItem value="MeOS" label="MeOS">
+        You need to export the splits XML file.
+        Go to **Services → Available Services → Results Online**
+
+        ![Menu to activate a service to export results in MeOS](./img/MeOS/UploadResults_Menu.png)
+
+        This service has a lot of different configuration options. You have to set:
+        - **Service Name**: O-Replay (optional)
+        - **Time interval**: How frequent are the results updated.
+        30 seconds or 1 minute are common values.
+        - **Classes**: Choose all the classes.
+        - **Export Format**: must be **"IOF XML 3.0"**
+        - **Save to disk**: Is the only option that has to be ticked.
+        Choose the folder O-Replay Client is listening to.
+
+        ![Standard options of Results Online service to work with O-Replay in MeOS](./img/MeOS/UploadResults_StandartServiceConfig.png)
+    </TabItem>
+</Tabs>
+
+:::warning[Regular results export (i.e., no splits)]
+While the client supports uploading results files without splits, this is strongly discouraged.
+Without splits, virtual tickets and split details cannot be displayed.
+:::
+
+:::warning[Upload failing with large number of runners]
+If you are uploading a large number of results (e.g., about 1,000 runners)
+that have not been uploaded previously, the process may take up to a minute.
+If it takes longer than one minute, an error will occur.
+In this case, try uploading the same results again two or three more times.
+Some classes may already have been saved to the server, so the process will eventually be completed.
+:::
+
+:::tip
+Check out the [Overall Results](./overall.mdx) page for multi-stage competitions.
+:::
+
+### Upload Online Controls
+
+If you are using online controls in your race, in addition to the previous steps,
+you must export and upload those online splits.
+If you are not using them, you can skip this section.
+We support IOF XML v3. You can export the files to the same folder you are exporting splits.
+
+<Tabs groupId="timekeeping-software" queryString>
+    <TabItem value="SportSoftware-2010" label="OE2010">
+        You need to export the online splits XML file.
+        Go to **"Speaker" → "Intermediate results"**:
+
+        ![Menu that has to be chosen](./img/OE2010/ExportOnlineSplits_ChoseMenu.png)
+
+        We have to set the same settings as before.
+        Export all competitors and uncheck **"Exclude dns"** option.
+        Remember to set the report format to **HH:MM:SS**.
+        Due to a bug in OE2010,
+        exporting with decimal places will result in wrong times being displayed in O-Replay.
+
+        ![Settings that has to be applied](./img/OE2010/ExportOnlineSplits_Settings.png)
+
+        Export the file at your desired refresh interval.
+
+        ![Automatic report settings](./img/OE2010/ExportOnlineSplits_AutomaticReport.png)
+
+        Export using XML IOF v3.
+
+        ![Save format dialog](./img/OE2010/ExportOnlineSplits_SaveXML.png)
+    </TabItem>
+    <TabItem value="SportSoftware-12" label="OE12">
+        You need to export the online splits XML file.
+        Go to **"Speaker" → "Intermediate results"**:
+
+        ![Menu that has to be chosen](./img/OE12/ExportOnlineControls_ChoseMenu.png)
+
+        We have to set the same settings as before.
+        Export all competitors and uncheck **"Exclude dns"** option.
+
+        ![Settings that has to be applied](./img/OE12/ExportOnlineControls_Settings.png)
+
+        Export the file at your desired refresh interval.
+
+        ![Automatic report settings](./img/OE12/ExportOnlineControls_AutomaticReport.png)
+
+        Export using XML IOF v3.
+
+        ![Save format dialog](./img/OE12/ExportOnlineControls_SaveXML.png)
+    </TabItem>
+    <TabItem value="MeOS" label="MeOS">
+        Do you know how to do it in MeOS? help us complete the documentation!
+    </TabItem>
+</Tabs>
+
+## Other considerations
+
+:::tip
+Check out the [Overall Results](./overall.mdx) page for multi-stage competitions.
+:::
+
+:::note[Using multiple results platforms]
+
+Some people ask whether they can upload results to both Liveresultats and O-Replay simultaneously.
+Liveresultats has served us well for many years, and we truly appreciate its contributions.
+However, we firmly believe that O-Replay is the future,
+offering all the same features and many more in a more user-friendly way.
+
+That said, if you choose to use both platforms, you must export the files to separate folders.
+Otherwise, both clients will compete for access—reading, processing,
+and deleting the same files—which will prevent either from functioning correctly.
+
+:::
+
