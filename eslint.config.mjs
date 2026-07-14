@@ -12,15 +12,27 @@ import reactHooks from "eslint-plugin-react-hooks"
 import reactRefresh from "eslint-plugin-react-refresh"
 import jsonc from "eslint-plugin-jsonc"
 import * as jsoncParser from "jsonc-eslint-parser"
-import i18next from "eslint-plugin-i18next"
 import * as mdx from "eslint-plugin-mdx"
 import prettier from "eslint-config-prettier"
+import docusaurus from "@docusaurus/eslint-plugin"
 
 export default tseslint.config(
+  // ---- Docusaurus main eslint configurations ----
+  {
+    plugins: {
+      "@docusaurus": docusaurus,
+    },
+    rules: {
+      "@docusaurus/no-untranslated-text": "error",
+      "@docusaurus/string-literal-i18n-messages": "error",
+    },
+  },
+
   // ---- global ignores (replaces `ignorePatterns`) ----
   {
     ignores: [
       "build",
+      "blog", // No blog yet
       "tsconfig.json",
       ".docusaurus", // Docusaurus build cache
       "node_modules",
@@ -45,7 +57,6 @@ export default tseslint.config(
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      i18next,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -54,13 +65,6 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       indent: "off",
-      "i18next/no-literal-string": [
-        "error",
-        {
-          markupOnly: true,
-          ignoreAttribute: ["data-testid", "to", "key", "id", "name"],
-        },
-      ],
     },
   },
 
@@ -94,7 +98,7 @@ export default tseslint.config(
     rules: {
       ...mdx.flat.rules,
       // MDX prose is not app UI copy, so don't flag literal strings here.
-      "i18next/no-literal-string": "off",
+      //"i18next/no-literal-string": "off",
     },
   },
 
