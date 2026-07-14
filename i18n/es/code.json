@@ -151,7 +151,7 @@
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "tip",
+    "message": "consejo",
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
@@ -325,5 +325,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "homepage.easy.title": {
+    "message": "Facil de Usar",
+    "description": "The homepage Easy-to-Use Title"
+  },
+  "homepage.easy.text": {
+    "message": "O-Replay se ha diseñado desde cero para mostrar resultados de orientación en directo y ser usado fácilmente por competidores, organizadores y espectadores."
+  },
+  "homepage.focus.title": {
+    "message": "Centrarse en lo Importante",
+    "description": "The homepage Focus-on-What-Matters Title"
+  },
+  "homepage.focus.text": {
+    "message": "O-Replay permite centrarse en la competición, mientras nosotros nos encargamos del resto. Empieza a crear tus eventos de orientación con resultados claros y ordenados."
+  },
+  "homepage.powered.title": {
+    "message": "Hecho por Orientadores",
+    "description": "The homepage Powered-by-Orienteers Title"
+  },
+  "homepage.powered.text": {
+    "message": "Como orientadores, entendemos vuestras necesidades. Ayúdanos a crear la página de resultados del futuro para todas las disciplinas de orientación."
   }
 }

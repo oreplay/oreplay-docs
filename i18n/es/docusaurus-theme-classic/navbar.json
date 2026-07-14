@@ -18,5 +18,13 @@
   "item.label.Features": {
     "message": "Features",
     "description": "Navbar item with label Features"
+  },
+  "item.label.About Us": {
+    "message": "About Us",
+    "description": "Navbar item with label About Us"
+  },
+  "item.label.O-Replay Events": {
+    "message": "O-Replay Events",
+    "description": "Navbar item with label O-Replay Events"
   }
 }
