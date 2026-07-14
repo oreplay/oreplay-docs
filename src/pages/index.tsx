@@ -7,6 +7,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures"
 import Heading from "@theme/Heading"
 
 import styles from "./index.module.css"
+import Translate from "@docusaurus/core/lib/client/exports/Translate"
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
@@ -22,7 +23,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            O-Replay Tutorial for Organizers - 5min ⏱️
+            <Translate>O-Replay Tutorial for Organizers - 5min ⏱️</Translate>
           </Link>
         </div>
       </div>
