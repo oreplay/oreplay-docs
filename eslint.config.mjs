@@ -27,6 +27,13 @@ export default tseslint.config(
       "@docusaurus/string-literal-i18n-messages": "error",
     },
   },
+  {
+    files: ["**/*.mdx"],
+    rules: {
+      "@docusaurus/no-untranslated-text": "off",
+      "@docusaurus/string-literal-i18n-messages": "off",
+    },
+  },
 
   // ---- global ignores (replaces `ignorePatterns`) ----
   {
