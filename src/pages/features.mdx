@@ -2,6 +2,8 @@
 title: Features
 ---
 
+import { FeatureList, Feature } from "@site/src/components/features"
+
 # Ongoing Development
 
 We are an ongoing project, continuously working on bringing new features and improve the existing ones.
@@ -9,24 +11,31 @@ We are an ongoing project, continuously working on bringing new features and imp
 ## Supported Orienteering Disciplines {/* #supported-orienteering-disciplines */}
 
 As of now, we have support for the following orienteering disciplines:
-- ✅ **Classic**: Foot-O / MTB-O / Ski-O (classification by time)
-- ✅ **Score**: Rogaining / Ultra-Score (classification by points)
-- 🚧 **Relay**
-- ❌ **Raid**: Adventure Races
+<FeatureList>
+    <Feature id="classic">**Classic**: Foot-O / MTB-O / Ski-O (classification by time)</Feature>
+    <Feature id="score">**Score**: Rogaining / Ultra-Score (classification by points)</Feature>
+    <Feature id="relay">**Relay**</Feature>
+    <Feature id="raid">**Raid**: Adventure Races</Feature>
+</FeatureList>
 
 ## Available Features {/* #available-features */}
 
 We currently support the following features:
-- ✅ Start list by classes
-- ✅ Live results by classes
-- ✅ Live online controls
-- ✅ Live virtual tickets
-- ✅ Live splits table
-- ❌ Team results in FootO and Rogaining
-- ❌ Individual courses (for example, one man relays)
-- ✅ Overall championship results by classes
-- ✅ Start list by clubs
-- ❌ Championship start list by clubs
-- ✅ Results by clubs
-- ❌ Direct integration with online controls providers
-(such as [ROC](https://roc.olresultat.se/) and [CPI](https://www.jaruori.es/))
+<FeatureList>
+    <Feature id="classic_start_class">Start list by classes</Feature>
+    <Feature id="classic_results_class">Live results by classes</Feature>
+    <Feature id="classic_radios">Live online controls</Feature>
+    <Feature id="classic_ticket">Live virtual tickets</Feature>
+    <Feature id="classic_splits_class">Live splits table</Feature>
+    <Feature id="classic_team_results_class">Team results in FootO</Feature>
+    <Feature id="score_team_results_class">Team results in Rogaining</Feature>
+    <Feature id="individual_courses">Individual courses (for example, one man relays)</Feature>
+    <Feature id="overall_results_class">Overall championship results by classes</Feature>
+    <Feature id="classic_start_club">Start list by clubs</Feature>
+    <Feature id="overall_start_club">Championship start list by clubs</Feature>
+    <Feature id="classic_results_club">Results by clubs</Feature>
+    <Feature id="integration_radios">
+        Direct integration with online controls providers
+        (such as [ROC](https://roc.olresultat.se/) and [CPI](https://www.jaruori.es/))
+    </Feature>
+</FeatureList>

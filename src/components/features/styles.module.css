@@ -1,0 +1,12 @@
+ul.list {
+  list-style-type: none;
+}
+
+li::marker {
+  content: attr(data-content);
+}
+
+li.spacing {
+  margin-top: -1rem;
+  margin-left: 1rem;
+}

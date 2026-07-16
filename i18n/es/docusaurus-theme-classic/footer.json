@@ -40,11 +40,11 @@
     "description": "The label of footer link with label=Managing Errors linking to /docs/category/managing-errors"
   },
   "link.item.label.About Us": {
-    "message": "About Us",
+    "message": "Sobre Nosotros",
     "description": "The label of footer link with label=About Us linking to /about-us"
   },
   "link.item.label.Features": {
-    "message": "Features",
+    "message": "Funcionalidades",
     "description": "The label of footer link with label=Features linking to /features"
   },
   "link.item.label.O-Replay": {
