@@ -1,33 +1,42 @@
 ---
-title: Features
+title: Funcionalidades
 ---
+
+import { FeatureList, Feature } from "@site/src/components/features"
 
 # Hoja de ruta
 
 Somos un proyecto en desarrollo continuo,
 trabajando constantemente para agregar nuevas funcionalidades y mejorar las ya existentes.
 
-## Disciplinas de Orientación Admitidas
+## Disciplinas de Orientación Admitidas {/* #supported-orienteering-disciplines */}
 
 Actualmente, admitimos las siguientes disciplinas de orientación:
-- ✅ **Classic**: O-Pie / MTB-O / Ski-O (clasificación por tiempo)
-- ✅ **Score**: Rogaining / Ultra-Score (clasificación por puntos)
-- 🚧 **Relevos**
-- ❌ **Raid**: Raid de Aventura
+<FeatureList>
+    <Feature id="classic">**Clásica**: O-Pie / MTB-O / Ski-O (clasificación por tiempo)</Feature>
+    <Feature id="score">**Score**: Rogaining / Ultra-Score (clasificación por puntos)</Feature>
+    <Feature id="relay">**Relevo**</Feature>
+    <Feature id="raid">**Raid**: Raid de Aventura</Feature>
+</FeatureList>
 
-## Características Disponibles
+## Características Disponibles {/* #available-features */}
 
 Actualmente, ofrecemos las siguientes funcionalidades:
-- ✅ Salidas por categorías
-- ✅ Resultados en vivo por categorías
-- ✅ Radio controles
-- ✅ Tickets digitales en tiempo real
-- ✅ Tabla de parciales en tiempo real
-- ❌ Resultados por equipos en O-Pie y Rogaining
-- ❌ Recorridos individuales (por ejemplo, one man relay)
-- ✅ Resultados del campeonato por categorías
-- ✅ Salida por clubes
-- ❌ Salidas de todas las etapas por clubes
-- ✅ Resultados por clubes
-- ❌ Integración directa con proveedores de radiocontroles
-(como [ROC](https://roc.olresultat.se/) y [CPI](https://www.jaruori.es/))
+<FeatureList>
+    <Feature id="classic_start_class">Salidas por categorías</Feature>
+    <Feature id="classic_results_class">Resultados en vivo por categorías</Feature>
+    <Feature id="classic_radios">Radio controles</Feature>
+    <Feature id="classic_ticket">Tickets digitales en tiempo real</Feature>
+    <Feature id="classic_splits_class">Tabla de parciales en tiempo real</Feature>
+    <Feature id="classic_team_results_class">Resultados por equipos en O-Pie</Feature>
+    <Feature id="score_team_results_class">Resultados por equipos en Rogaining</Feature>
+    <Feature id="individual_courses">Recorridos individuales (por ejemplo, one man relay)</Feature>
+    <Feature id="overall_results_class">Resultados del campeonato por categorías</Feature>
+    <Feature id="classic_start_club">Salida por clubes</Feature>
+    <Feature id="overall_start_club">Salidas de todas las etapas por clubes</Feature>
+    <Feature id="classic_results_club">Resultados por clubes</Feature>
+    <Feature id="integration_radios">
+        Integración directa con proveedores de radiocontroles
+        (como [ROC](https://roc.olresultat.se/) y [CPI](https://www.jaruori.es/))
+    </Feature>
+</FeatureList>

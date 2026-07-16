@@ -16,15 +16,15 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Features": {
-    "message": "Features",
+    "message": "Funcionalidades",
     "description": "Navbar item with label Features"
   },
   "item.label.About Us": {
-    "message": "About Us",
+    "message": "Sobre Nosotros",
     "description": "Navbar item with label About Us"
   },
   "item.label.O-Replay Events": {
-    "message": "O-Replay Events",
+    "message": "Eventos en O-Replay",
     "description": "Navbar item with label O-Replay Events"
   }
 }
