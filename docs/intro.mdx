@@ -15,19 +15,28 @@ you would create one event "Championship" with two stages:
 "Middle Distance" and "Long Distance".
 
 Each stage can represent a different orienteering discipline.
+In the example, both stages would be the same discipline (classic Foot-O),
+but there could be a relay competition in the same competition,
+and that would be a stage of type relay.
 
-For a single race, you would create an event "Long Distance" with a single stage "Long Distance".
+If instead of a multi-stage event it is an event with a single race,
+you would create an event "Long Distance" with one stage "Long Distance".
+
+:::tip
+Check out the [Features page](/features)
+to see what disciplines and features are currently supported.
+:::
 
 ## Workflow Summary {/* #workflow-summary */}
 
 There are two main components in O-Replay:
-1. **O-Replay WEB**: *Manage your events*
+1. **O-Replay WEB**: *Website where you manage your events*
     - Log In to Create and Manage your events.
     - Add the different stages of your event.
     - Generate the `API Key` for this event.
     - Share a `QR-code` of this event.
-2. **O-Replay Desktop Client**: *Upload Data (results, start lists...)*
+2. **O-Replay Desktop Client**: *PC program used to upload data (results, start lists...)*
     - Use the `API Key` from the O-Replay WEB.
     - Select the stage you want to upload data to.
-    - Select the folder where such data is.
+    - Select the folder where such data is (or is exported to).
     - Start the Upload Process.
