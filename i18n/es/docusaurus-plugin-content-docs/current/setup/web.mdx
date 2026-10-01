@@ -1,0 +1,60 @@
+---
+sidebar_position: 1
+---
+
+# Gestiona O-Replay WEB
+
+:::danger[Beware // Atención]
+This page is still being written. //
+Esta página todavía se está escribiendo.
+:::
+
+## Registrarse a O-Replay {/* #register-to-o-replay */}
+
+Visita nuestra [página de registro](http://www.oreplay.es/sign-up) para crear una cuenta.
+
+Por fabor ten en cuenta que O-Replay está en desarrollo activo.
+Muchas funcionalidades planeadas todavía no estan disponibles, pero el sistema está preparado para su uso.
+Visita la [página de Funcionalidades](/features).
+
+## Create an Event {/* #create-an-event */}
+
+Las carreras en O-Replay se organizan en eventos y etapas.
+Por ejemplo, si organizas un campeonato de fin de semana con carreras de media y larga distancia,
+entonces crearías un evento "Campeonato" con dos etapas:
+"Media Distancia" y "Larga Distancia".
+Cada etapa puede representar una disciplina de orientación diferente.
+
+Al iniciar sesión, se le redirigirá a la página de **"Panel de control"**
+(accesible desde el menú principal una vez iniciada la sesión).
+En esta página, verás todos tus eventos (si tienes alguno),
+y también podrás crear nuevos eventos de la siguiente manera:
+1. Crea un evento pulsando el botón **"+"**.
+2. Rellena los detalles del evento y pulsa guardar.
+3. Crea una etapa pulsando el botón **"+"**.
+4. Rellena los detalles de la etapa y pulsa guardar.
+5. Repite los pasos 3 y 4 para crear tantas etapas como sea necesario.
+
+:::tip
+Puedes editar todos los detalles de tu evento y etapas en cualquier momento.
+:::
+
+:::warning[¿Falta nombre de Organizador?]
+Si el club o entidad no aparece en el desplegable de organizadores, por fabor,
+contacta con nosotros via email a **support@oreplay.es**
+:::
+
+:::info
+Asegurate de crear almenos una etapa; en caso contrario, no podrás subir datos.
+:::
+
+## Gestiona la Clave Secreta {/* #manage-the-secret-key */}
+
+Después de crear el evento y etapas, genera una `Clave Secreta` (o token).
+Este token sirve de contraseña secreta para subir resultados
+y puede ser compartida con tu equipo de cronometradores sin exponer tus credenciales de O-Replay.
+Ten en cuenta que los tokens expiran un mes después de su creación, pero se pueden volver a generar en cualquier momento.
+Cuando se renuevan, el token antiguo se queda inválido y se genera uno de nuevo.
+Usa esta opción si tu token queda comprometido.
+
+![Menú para crear Claves Secretas para un evento](./img/GenerateToken.png)
