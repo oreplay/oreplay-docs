@@ -6,11 +6,6 @@ sidebar_position: 1
 
 Descubrimos **O-Replay en menos de 5 minutos**.
 
-:::danger[Beware // Atención]
-This page is still being written. //
-Esta página todavía se está escribiendo.
-:::
-
 ## Estructura {/* #structure */}
 
 Las carreras en O-Replay se organizan en eventos y etapas.
@@ -20,8 +15,17 @@ entonces crearías un evento "Campeonato" con dos etapas:
 "Media Distancia" y "Larga Distancia".
 
 Cada etapa puede representar una disciplina de orientación diferente.
+En el ejemplo, ambas etapas serían de la misma disciplina (clásica O-Pie),
+pero podría haber una prueba de relevos en la misma competición,
+y esta sería una etapa de tipo relevo.
 
-Para una sola carrera, crearías un evento "Larga Distancia" con una sola etapa "Larga Distancia".
+Si en vez de un evento multi-etapa es un evento con una sola prueba,
+crearías un evento "Larga Distancia" con una sola etapa "Larga Distancia".
+
+:::tip
+Revisa la [página de Funcionalidades](/features)
+para ver qué disciplinas y funcionalidades se admiten actualmente.
+:::
 
 ## Resumen del Flujo {/* #workflow-summary */}
 
@@ -31,8 +35,8 @@ Hay dos componentes principales en O-Replay:
     - Añade las distintas etapas de tu evento.
     - Genera la `Clave Secreta` para este evento.
     - Comparte un `Código QR` de este evento.
-2. **O-Replay Cliente de Escritorio**: *Sube Datos (resultados, horas de salida...)*
+2. **O-Replay Cliente de Escritorio**: *Programa para subir datos (resultados, horas de salida...)*
     - Use la `Clave Secreta` de O-Replay WEB.
     - Selecciona la etapa a la que quieras subir datos.
-    - Selecciona la carpeta donde se almacenan estos datos.
+    - Selecciona la carpeta donde se almacenan estos datos (o se exportan).
     - Inicia el Proceso de Subida.
