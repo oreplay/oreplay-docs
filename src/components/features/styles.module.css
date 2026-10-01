@@ -1,12 +1,12 @@
-ul.list {
-  list-style-type: none;
+ul.listt {
+  list-style-type: disc;
 }
 
-li::marker {
+li.spacing::marker {
   content: attr(data-content);
 }
 
-li.spacing {
+li.spacingg {
   margin-top: -1rem;
   margin-left: 1rem;
 }
