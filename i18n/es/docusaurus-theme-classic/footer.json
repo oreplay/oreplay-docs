@@ -50,5 +50,9 @@
   "link.item.label.O-Replay": {
     "message": "O-Replay",
     "description": "The label of footer link with label=O-Replay linking to https://www.oreplay.es"
+  },
+  "link.item.label.Developers' Info": {
+    "message": "Developers' Info",
+    "description": "The label of footer link with label=Developers' Info linking to /dev-info"
   }
 }
