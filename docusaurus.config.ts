@@ -101,6 +101,10 @@ const config: Config = {
         {
           type: "localeDropdown",
           position: "right",
+          classname: "locale-drop",
+          // dropdownItemsAfter: [
+          //     { to: "/about-us#contribute", label: "Help-us-Translate"}
+          // ]
         },
         {
           href: "https://github.com/oreplay/",
