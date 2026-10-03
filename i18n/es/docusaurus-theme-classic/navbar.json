@@ -26,5 +26,9 @@
   "item.label.O-Replay Events": {
     "message": "Eventos en O-Replay",
     "description": "Navbar item with label O-Replay Events"
+  },
+  "item.label.Developers": {
+    "message": "Developers",
+    "description": "Navbar item with label Developers"
   }
 }

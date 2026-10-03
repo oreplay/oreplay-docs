@@ -1,0 +1,52 @@
+---
+sidebar_position: 3
+---
+
+# Relay Stages
+
+:::danger[Not supported yet]
+Esta página todavía se está escribiendo, ya que esta funcionalidad todavía está en desarrollo.
+Consulte la [página de Funcionalidades](/features).
+:::
+
+:::info
+Aquí hay una pequeña explicación sobre qué archivos se deben exportar del OS12,
+dado por un comentario de pimatherror el 6 de Abril en la Issue de GitHub:
+[Relays support #58](https://github.com/oreplay/oreplay-backend/issues/58#issuecomment-4193435930).
+:::
+
+## Test resultados con OS12 {/* #test-results-with-os12 */}
+
+Testeado subiendo 2 archivos xml y obteniendo datos completos para competición de relevos
+(parciales incluídos, pero no online/radio controls).
+
+### Resultados Oficiales (por categoría): {/* #official-results-by-class */}
+
+Resultados definitivos (finales) para equipos con un resultado final:
+o bien el equipo completo ha terminado o bien un miembro no ha qualificado (MP/DESC/Ab./NS...).
+
+Este archivo puede incluir los parciales con la configuración de "formato extendido":
+<img width="388" height="217" alt="Image" src="https://github.com/user-attachments/assets/9e6a3657-d936-4380-8f0c-97a9c09841d6" />
+
+<img width="279" height="442" alt="Image" src="https://github.com/user-attachments/assets/f4e0769e-f6ed-4689-80ff-8126f8ce85ae" />
+
+**Note:** "Formato extendido" fuerza al archivo XML generado (en Exportar -> XML IOF 3.0) incluir split times.
+Sin este checkbox los parciales no se incluyen en el XML.
+
+O-Replay Desktop y el Backend ya procesan los tiempos parciales y posiciones finales
+(a partir de este archivo XML) correcamente.
+
+### Resultados Provisionales (por categoría): {/* #provisional-results-by-class */}
+
+Para una cobertura en vivo del evento, queremos información sobre los resultados de las postas actuales.
+Este archivo NO incluye los tiempos parciales, así que el archivo de Resultados Oficiales es igualmente necesario.
+**Note that** no ha necesidad de subir ningún archivo desde "Resultados -> Parciales -> por categoría"
+(que solo permite exportación a CSV, no XML).
+Por tanto, no hay necesidad de tener 2 instancias de cliente de escritorio leyendo CSV y XML respectivamente.
+
+<img width="214" height="158" alt="Image" src="https://github.com/user-attachments/assets/c6b239b6-e4b3-4eee-ad64-3a7355b57e38" />
+
+<img width="295" height="579" alt="Image" src="https://github.com/user-attachments/assets/05d509dc-3e8b-4947-b551-d30ee4964337" />
+
+**Note:** "Resultado total" con "Formato extendido" fuerza al archivo XML generado incluir TODAS las postas actuales.
+Sin este checkbox el XML solo incluye los mismos equipos que en los Resultados Oficiales.
