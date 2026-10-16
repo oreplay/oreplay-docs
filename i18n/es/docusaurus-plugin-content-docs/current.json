@@ -8,7 +8,7 @@
     "description": "The label for category 'Getting Started' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Getting Started.link.generated-index.description": {
-    "message": "Here we will see how to set up everything necessary to use O-Replay as an Organizer.",
+    "message": "Aquí veremos como configurar todo lo necesario para usar O-Replay como Organizador.",
     "description": "The generated-index page description for category 'Getting Started' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Uploading Data": {
