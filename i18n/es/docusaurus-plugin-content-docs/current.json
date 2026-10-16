@@ -12,11 +12,11 @@
     "description": "The generated-index page description for category 'Getting Started' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Uploading Data": {
-    "message": "Uploading Data",
+    "message": "Subida de Datos",
     "description": "The label for category 'Uploading Data' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Managing Errors": {
-    "message": "Managing Errors",
+    "message": "Gestionando Errores",
     "description": "The label for category 'Managing Errors' in sidebar 'tutorialSidebar'"
   }
 }
