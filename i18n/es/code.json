@@ -175,7 +175,7 @@
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(abrir en pestaña nueva)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
@@ -255,11 +255,11 @@
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "Expandir desplegable",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "Contraer desplegable",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
@@ -283,15 +283,15 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "Autores",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View All Authors",
+    "message": "Ver Todos los Autores",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "Este autor aún no ha escrito ninguna publicación.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -346,5 +346,14 @@
   },
   "homepage.powered.text": {
     "message": "Como orientadores, entendemos vuestras necesidades. Ayúdanos a crear la página de resultados del futuro para todas las disciplinas de orientación."
+  },
+  "homepage.main.title": {
+    "message": "Documentación Oficial de O-Replay"
+  },
+  "homepage.main.description": {
+    "message": "Por orientadores, Para orientadores"
+  },
+  "homepage.main.button.text": {
+    "message": "Tutorial O-Replay para Organizadores - 5min ⏱️"
   }
 }
