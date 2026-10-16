@@ -91,7 +91,7 @@ const config: Config = {
         },
         { to: "/features", label: "Features", position: "left" },
         { to: "/about-us", label: "About Us", position: "left" },
-        { to: "/dev-info", label: "Developers", position: "left" },
+        // { to: "/dev-info", label: "Developers", position: "left" },
         /*{to: '/blog', label: 'Blog', position: 'left'},*/
         {
           href: "https://www.oreplay.es",
