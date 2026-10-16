@@ -11,8 +11,13 @@ Consulte la [página de Funcionalidades](/features).
 
 :::info
 Aquí hay una pequeña explicación sobre qué archivos se deben exportar del OS12,
-dado por un comentario de pimatherror el 6 de Abril en la Issue de GitHub:
+dado por un comentario de pimatherror el 6 de Abril, 2026, en la Issue de GitHub:
 [Relays support #58](https://github.com/oreplay/oreplay-backend/issues/58#issuecomment-4193435930).
+
+A fecha de 16 de octubre, 2026, tras testear con los archivos que permite exportar el OS2010,
+se concluye que en el estado actual no hay forma límpia de exportar los parciales
+de los competidores finalizados con equipo sin resultado final.
+Más detalles [abajo](#test-results-with-os2010).
 :::
 
 ## Test resultados con OS12 {/* #test-results-with-os12 */}
@@ -50,3 +55,31 @@ Por tanto, no hay necesidad de tener 2 instancias de cliente de escritorio leyen
 
 **Note:** "Resultado total" con "Formato extendido" fuerza al archivo XML generado incluir TODAS las postas actuales.
 Sin este checkbox el XML solo incluye los mismos equipos que en los Resultados Oficiales.
+
+## Test resultados con OS2010 {/* #test-results-with-os2010 */}
+
+Mismos archivos que para OE12.
+
+Sin embargo, en el XML solo se incluyen los parciales de los competidores cuyo equipo tiene resultado final.
+Por tanto, se necesita un tercer archivo.
+
+El tercer archivo extra para los parciales debe ser uno de los CSV del menú de Resultados --> Parciales.
+
+:::danger[BUG]
+El Cliente de Escritorio de O-Replay es capaz de procesar dichos archivos CSV,
+pero en el proceso se borran las posiciones de los equipos.
+
+Las posiciones se restablecen solas cuando se sube alguno de los otros archivos XML,
+aunque la vista de resultados se verá mal entre la subida del CSV y la del XML.
+:::
+
+:::tip
+De momento, una alternativa sería exportar el CSV de parciales manualmente,
+seguido por una exportación manual del XML justo después que el CSV se haya procesado,
+minimizando así el tiempo en que "se ve mal".
+:::
+
+:::info
+Si no se sube ningún CSV,
+solo tendrán parciales disponibles aquellos corredores cuyo equipo tenga resultado final.
+:::

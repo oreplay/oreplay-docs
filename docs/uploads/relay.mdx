@@ -11,8 +11,13 @@ Check out the [Features page](/features).
 
 :::info
 Here is a short explanation on what files shall be exported from OS12,
-given by a comment by pimatherror on Apr 6 in the GitHub Issue:
+given by a comment by pimatherror on Apr 6, 2026, in the GitHub Issue:
 [Relays support #58](https://github.com/oreplay/oreplay-backend/issues/58#issuecomment-4193435930).
+
+As of Oct 16, 2026, after testing with the possible files exported from OS2010,
+we conclude that in the current state of the project there is no clean way to export the splits
+from finished runners whose team has no final result.
+More details [below](#test-results-with-os2010).
 :::
 
 ## Test results with OS12 {/* #test-results-with-os12 */}
@@ -39,3 +44,31 @@ This XML file does NOT include split times, so Official Results are still necess
 <img width="295" height="579" alt="Image" src="https://github.com/user-attachments/assets/05d509dc-3e8b-4947-b551-d30ee4964337" />
 
 **Note:** "Resultado total" with "Formato extendido" makes the XML generated file to include ALL current legs. Without this checkbox the XML only includes same teams as in Official Results.
+
+## Test results with OS2010 {/* #test-results-with-os2010 */}
+
+Same files as for OE12.
+
+However, the splits included in the XML are only for those runners in teams with final result.
+Therefore, a third file is needed.
+
+The third extra file for splits shall be a CSV from the Results --> Splits menu.
+
+:::danger[BUG]
+The O-Replay Desktop Client is able to process those CSV files,
+but it deletes the team results.
+
+It fixes itself when uploading again any of the XML files,
+though it will look bad in the meantime between the CSV and XML upload.
+:::
+
+:::tip
+For now, a workaround would be to export the CSV splits manually,
+followed by a manual XML export right after the CSV file is processed,
+minimizing the "bad-looking" time.
+:::
+
+:::info
+If no CSV is uploaded,
+only runners whose team has a final result will have splits available.
+:::
