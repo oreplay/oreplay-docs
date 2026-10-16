@@ -7,23 +7,31 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures"
 import Heading from "@theme/Heading"
 
 import styles from "./index.module.css"
-import Translate from "@docusaurus/core/lib/client/exports/Translate"
+import Translate from "@docusaurus/Translate"
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext()
+  // const { siteConfig } = useDocusaurusContext()
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          <Translate id="homepage.main.title">
+            O-Replay Official Documentation
+          </Translate>
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          <Translate id="homepage.main.description">
+            By orienteers, For orienteers
+          </Translate>
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            <Translate>O-Replay Tutorial for Organizers - 5min ⏱️</Translate>
+            <Translate id="homepage.main.button.text">
+              O-Replay Tutorial for Organizers - 5min ⏱️
+            </Translate>
           </Link>
         </div>
       </div>
@@ -34,10 +42,7 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext()
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="O-Replay Official Documentation"
-    >
+    <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

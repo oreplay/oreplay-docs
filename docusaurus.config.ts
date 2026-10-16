@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic"
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "O-Replay documentation",
+  title: "O-Replay Docs",
   tagline: "By orienteers, For orienteers",
   favicon: "img/logo.svg",
   // favicon: 'img/favicon.ico',
